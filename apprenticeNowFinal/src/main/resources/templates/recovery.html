@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/recovery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>myTravel: RECOVERY</title>
+</head>
+<body>
+    <div class="navbar">
+        <a th:href="@{/}"><i class="fa fa-fw-home"></i> Home</a>
+        <a th:href="@{/login}"><i class="fa fa-fw fa-user"></i> Login</a>
+    </div>
+	<div class="container">
+		<h1>Forgot Password</h1>
+		<h6 class="info">Enter your email to recover your password.</h6> 
+        <div class="form">
+			<input type="text" placeholder="Enter Email" id="email">
+           <a href="https://i.pinimg.com/564x/d3/3f/eb/d33feb9aa0c33f0656e7d59ee139734e.jpg"> <button type="submit">Reset Password</button></a>
+		</div>
+        </form>
+	</div>
+</body>
+</html>

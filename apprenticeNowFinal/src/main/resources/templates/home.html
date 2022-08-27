@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <title>theBlog</title>
+    <title>myTravels</title>
 </head>
 <body>
     <div class="navbar">
-        <a class="active" href="#"><i class="fa fa-fw-home"></i> Home</a>
-        <form class="searchbar">
-            <input type="search" placeholder="Search here" name="search" class="searchbar-input" onkeyup="buttonUp();" required>
-            <input type="submit" class="searchbar-submit" value="GO">
-            <span class="searchbar-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
-        </form>
+        <a class="active" th:href="@{/}"><i class="fa fa-fw-home"></i> Home</a>
+        <div class="search-container">
+            <form action="/search" method="get">
+              <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+              <label class="button searchbutton" for="searchright"><span class="mglass">&#9906;</span></label>
+            </form>
+          </div>
         <a href="/contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
         <a href="/login"><i class="fa fa-fw fa-user"></i> Login</a>
+        <a href="/signUp"><i class="fa fa-address-book-o" aria-hidden="true"></i> Sign Up</a>
     </div>
     <div>
         <img id="img1" src="https://github.com/lvaladez1/Projects/blob/main/apprenticeNowFinal/src/main/resources/static/images/The-Wedding-Bliss-Thailand-6.jpg?raw=true"/>
@@ -30,18 +35,17 @@
     <section>
         <div class="leftcolumn">
             <div class="card">
-              <h2>Thailand!</h2>
-              <h5>The Tropic Adventure by Team Blue Syltherin, Mar 24, 2022</h5>
+              <h2 class="blogTitle">{{ title }}</h2>
+              <h5 class="blogDetails">The Tropic Adventure by Team Blue Syltherin, Mar 24, 2022</h5>
               <img 
               class="disImg" 
-
               src="https://github.com/lvaladez1/Projects/blob/main/apprenticeNowFinal/src/main/resources/static/images/Wedding-126.jpg?raw=true">
               </img>
               <p>Landing at a small airport in Phuket Thailand....</p>
             </div>
             <div class="card">
-              <h2>TITLE HEADING</h2>
-              <h5>Title description, Sep 2, 2017</h5>
+              <h2 class="blogTitle">TITLE HEADING</h2>
+              <h5 class="blogDetails">Title description, Sep 2, 2017</h5>
               <div class="fakeimg" style="height:200px;">Image</div>
               <p>Some text..</p>
             </div>
@@ -67,6 +71,5 @@
           </div>
         </div>
     </sidebar>
-    <script src="scripts/index.js"></script>
 </body>
 </html>

@@ -1,13 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>myTravels : LOGIN</title>        
 </head>
-<body>
-    <p>login
-    </p>
+<body id="loginHTML">
+    <!-- navbar -->
+    <div class="navbar">
+        <a th:href="@{/}"><i class="fa fa-fw-home"></i>Home</a>
+        <a class="active" th:href="@{/login}"><i class="fa fa-fw fa-user"></i><b>Login</b></a>
+        <a th:href="@{/signUp}"><i class="fa fa-address-book-o" aria-hidden="true"></i>Sign Up</a>
+    </div>
+    <!-- login section -->
+    <div class="container">
+        <h1>Login</h1>
+
+        <p>Don't have an account? Sign up <a th:href="@{/signUp}">here!</a></p>
+        <hr>
+        <div th:if="${param.error}">Invalid username and password.</div>
+        <div th:if="${param.logout}">You have been logged out.</div>
+
+        <form th:action="@{/login}" method="post">
+            <div class="container">
+                <input type="text" name="username" placeholder="User Name" required/>
+                <input type="password" name="password" placeholder="Password" required/>
+                <br><br>
+                <input id="signInBtn" type="submit" value="Sign In" />
+            </div>
+        </form>
+        <a th:href="@{/}"><button type="submit" class="cancel">Cancel</button></a>          
+    </div>
+    <div>
+        <a th:href="@{/recovery}">Forgot Password</a>
+    </div>
+    <footer>
+        <p>© 2022 Blue Slytherin</p>
+    </footer>
 </body>
 </html>

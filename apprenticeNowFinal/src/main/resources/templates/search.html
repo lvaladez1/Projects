@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Search</title>
 </head>
 <body>
-    <p>display search results here</p>
+    <div class="navbar">
+        <a href="/"><i class="fa fa-fw-home"></i> Home</a>
+        <div class="search-container">
+            <form action="/search" method="get">
+              <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+              <label class="button searchbutton" for="searchright"><span class="mglass">&#9906;</span></label>
+            </form>
+          </div>
+        <a href="/contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+        <a href="/login"><i class="fa fa-fw fa-user"></i> Login</a>
+    </div>
+    <h1 id="searchR">Search Results</h1>
+    <img id="searchImg" src="https://github.com/lvaladez1/Projects/blob/main/apprenticeNowFinal/src/main/resources/static/images/search_scope.jpg?raw=true" alt="">
+    <div class="card">
+        <h2>TITLE HEADING</h2>
+        <h5>Title description, Sep 2, 2017</h5>
+        <div class="fakeimg" style="height:200px;">Image</div>
+        <p>Some text..</p>
+    </div>
+    <footer>
+        <p>© 2022 Blue Slytherin</p>
+    </footer>
 </body>
 </html>
