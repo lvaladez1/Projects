@@ -1,0 +1,121 @@
+/* Style the navigation bar */
+.navbar {
+    width: 100%;
+    background-color: rgb(8, 8, 8);
+    overflow: auto;
+  }
+  
+  /* Navbar links */
+  .navbar a {
+    float: left;
+    text-align: center;
+    padding: 18px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  /* Navbar links on mouse-over */
+  .navbar a:hover {
+    background-color: rgb(39, 107, 131);
+  }
+  
+  /* Current/active navbar link */
+  .active {
+    background-color: #0486b1;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.container {
+    color: rgb(8, 8, 8);
+    text-align: center;
+    padding: 2px 2px;
+    width: 100%;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.container h1 {
+    font-size: 36px;
+    margin-top: 30px;
+}
+
+.container .form {
+    margin: 8px 0;
+}
+
+.container .form label {
+    display: block;
+    color: rgb(15, 15, 15);
+    text-align: left;
+    font-weight: 600;
+}
+
+.container .form input,
+.row .form button {
+    display: block;
+    padding: 8px 0;
+    width: 100%;
+    margin-top: 30px;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid rgb(12, 12, 12);
+}
+
+.container .form input:focus,
+.row .form button:focus {
+    background-color: rgb(251, 252, 251);
+    padding: 12px 8px;
+    animation: pulse 1s infinite ease;
+}
+
+button {
+    background-color: #4297A0;
+    color: white;
+    padding: 8px 14px;
+    margin: 8px 0;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+.info {
+    color: rgb(5, 5, 5);
+}
+
+@media screen and (max-width: 320px) {
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .container h1 {
+        font-size: 14px !important;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .container {
+        width: 50%;
+    }
+}

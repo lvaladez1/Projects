@@ -1,0 +1,110 @@
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: rgb(8, 8, 8);
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 18px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: rgb(39, 107, 131);
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #0486b1;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+/* End of NavBar CSS */
+
+/* Text Align */
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+div {
+  text-align: center;
+}
+
+/* Start of Signup CSS */
+body {
+  /* background-image: url("https://i.pinimg.com/564x/8d/1a/09/8d1a092426c2011ad5519105fa84d955.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+input[type=text],
+input[type=password] {
+  width: 50%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #e2e1e2;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+  background-color: rgb(241, 239, 239);
+  outline: none;
+}
+
+hr {
+  border: 1px solid #090909;
+  margin-bottom: 25px;
+}
+
+button {
+  background-color: #4297A0;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+.cancel {
+  padding: 14px 20px;
+  background-color: #E57F84;
+}
+
+.signup {
+  width: 50%;
+}
+
+.cancel {
+  width: 45%;
+}
+
+@media screen and (max-width: 150px) {
+
+  .cancel,
+  .signup {
+    width: 50%;
+  }
+}
