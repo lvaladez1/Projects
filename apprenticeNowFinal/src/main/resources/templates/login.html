@@ -13,20 +13,20 @@
     <div class="navbar">
         <a th:href="@{/}"><i class="fa fa-fw-home"></i>Home</a>
         <a class="active" th:href="@{/login}"><i class="fa fa-fw fa-user"></i><b>Login</b></a>
-        <a th:href="@{/signUp}"><i class="fa fa-address-book-o" aria-hidden="true"></i>Sign Up</a>
+        <a th:href="@{/signup}"><i class="fa fa-address-book-o" aria-hidden="true"></i>Sign Up</a>
     </div>
     <!-- login section -->
     <div class="container">
         <h1>Login</h1>
 
-        <p>Don't have an account? Sign up <a th:href="@{/signUp}">here!</a></p>
+        <p>Don't have an account? Sign up <a th:href="@{/signup}">here!</a></p>
         <hr>
-        <div th:if="${param.error}">Invalid username and password.</div>
+        <div th:if="${param.error}">Invalid email and password.</div>
         <div th:if="${param.logout}">You have been logged out.</div>
 
-        <form th:action="@{/login}" method="post">
+        <form action="/login" method="post">
             <div class="container">
-                <input type="text" name="username" placeholder="User Name" required/>
+                <input type="text" name="email" placeholder="Email" required/>
                 <input type="password" name="password" placeholder="Password" required/>
                 <br><br>
                 <input id="signInBtn" type="submit" value="Sign In" />

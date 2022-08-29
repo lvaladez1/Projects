@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <title>myTravels: Logged In</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="active" th:href="@{/}"><i class="fa fa-fw-home"></i> Home</a>
+        <div class="search-container">
+            <form action="/search" method="get">
+                <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+                <label class="button searchbutton" for="searchright"><span class="mglass">&#9906;</span></label>
+            </form>
+        </div>
+        <a href="/contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+    </div>
+    <div>
+        <img id="img1"
+            src="https://github.com/lvaladez1/Projects/blob/main/apprenticeNowFinal/src/main/resources/static/images/The-Wedding-Bliss-Thailand-6.jpg?raw=true" />
+        <img id="img2"
+            src="https://github.com/lvaladez1/Projects/blob/main/apprenticeNowFinal/src/main/resources/static/images/THE-ENTRY.jpg?raw=true" />
+        <img id="img3"
+            src="https://github.com/lvaladez1/Projects/blob/main/apprenticeNowFinal/src/main/resources/static/images/The-Wedding-Bliss-Thailand-8.jpg?raw=true" />
+    </div>
+    <br>
+    </form>
+    <section>
+        <div class="leftcolumn">
+            <form>
+                <div class="card">
+                    <input type="text" placeholder="Give your blog a title" />
+                    <input type="text" placeholder="Give a short description">
+                    <textarea name="blogText" id="text" cols="50" rows="10"></textarea>
+                </div>
+        </div>
+    </section>
+    </form>
+    <sidebar>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>About Me</h2>
+                <div class="fakeimg" style="height:100px;">Image</div>
+                <p>Some text about me ..</p>
+            </div>
+            <div class="card">
+                <h3>Popular Post</h3>
+                <div class="fakeimg">Image</div><br>
+                <div class="fakeimg">Image</div><br>
+                <div class="fakeimg">Image</div>
+            </div>
+            <div class="card">
+                <h3>Follow Me</h3>
+                <p>Some text..</p>
+            </div>
+        </div>
+        </div>
+    </sidebar>
+</body>
+
+</html>

@@ -18,13 +18,13 @@
         <a class="active" th:href="@{/}"><i class="fa fa-fw-home"></i> Home</a>
         <div class="search-container">
             <form action="/search" method="get">
-              <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+              <input class="search expandright" id="searchright" type="search" name="query" placeholder="Search">
               <label class="button searchbutton" for="searchright"><span class="mglass">&#9906;</span></label>
             </form>
           </div>
         <a href="/contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
         <a href="/login"><i class="fa fa-fw fa-user"></i> Login</a>
-        <a href="/signUp"><i class="fa fa-address-book-o" aria-hidden="true"></i> Sign Up</a>
+        <a href="/signup"><i class="fa fa-address-book-o" aria-hidden="true"></i> Sign Up</a>
     </div>
     <div>
         <img id="img1" src="https://github.com/lvaladez1/Projects/blob/main/apprenticeNowFinal/src/main/resources/static/images/The-Wedding-Bliss-Thailand-6.jpg?raw=true"/>
@@ -35,21 +35,16 @@
     <section>
         <div class="leftcolumn">
             <div class="card">
-              <h2 class="blogTitle">{{ title }}</h2>
-              <h5 class="blogDetails">The Tropic Adventure by Team Blue Syltherin, Mar 24, 2022</h5>
+              <h2 class="blogTitle">Welcome! Log In and blog!</h2>
+              <h5 class="blogDetails">Share your adventure experience!</h5>
               <img 
               class="disImg" 
               src="https://github.com/lvaladez1/Projects/blob/main/apprenticeNowFinal/src/main/resources/static/images/Wedding-126.jpg?raw=true">
               </img>
-              <p>Landing at a small airport in Phuket Thailand....</p>
+              <p> Share your travel stories and adventures with others! The Entry is all about travelling around the world 
+                and sharing experiences. Read and learn from other travelers adventures and witness the sights they've seen. 
+                Share your own adventures with other travelers as well. The Entry is your place for all things travel.</p>
             </div>
-            <div class="card">
-              <h2 class="blogTitle">TITLE HEADING</h2>
-              <h5 class="blogDetails">Title description, Sep 2, 2017</h5>
-              <div class="fakeimg" style="height:200px;">Image</div>
-              <p>Some text..</p>
-            </div>
-          </div>
     </section>
     <sidebar>
         <div class="rightcolumn">
